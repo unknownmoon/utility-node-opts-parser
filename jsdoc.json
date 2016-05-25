@@ -1,0 +1,44 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [ "jsdoc" ]
+  },
+  "source": {
+    "include": [ "index.js", "./lib" ],
+    "exclude": [ "*.spec.js" ]
+  },
+  "plugins": [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true,
+    "systemName": "Utility: NodeJS Opts Parser",
+    "footer": "",
+    "copyright": "Utility: NodeJS Opts Parser Copyright © 2016 The contributors to the project.",
+    "includeDate": true,
+    "navType": "vertical",
+    "theme": "paper",
+    "linenums": true,
+    "collapseSymbols": true,
+    "inverseNav": true,
+    "outputSourceFiles": true,
+    "outputSourcePath": true,
+    "dateFormat": "~HH:mm:ss.SSS, dddd, Do MMMM YYYY ZZ",
+    "syntaxTheme": "default",
+    "sort": true
+  },
+  "opts": {
+    "template": "./node_modules/ink-docstrap/template",
+    "encoding": "utf8",
+    "destination": "./jsdoc/",
+    "recurse": true,
+    "readme": "./README.md",
+    "package": "./package.json"
+  },
+  "markdown": {
+    "parser": "gfm",
+    "idInHeadings": true
+  }
+}
