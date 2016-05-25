@@ -14,9 +14,9 @@
   "templates": {
     "cleverLinks": false,
     "monospaceLinks": true,
-    "systemName": "Utility: NodeJS Log",
+    "systemName": "Utility: NodeJS Opts Parser",
     "footer": "",
-    "copyright": "Utility: NodeJS Log Copyright © 2016 The contributors to the project.",
+    "copyright": "Utility: NodeJS Opts Parser Copyright © 2016 The contributors to the project.",
     "includeDate": true,
     "navType": "vertical",
     "theme": "paper",
