@@ -1,0 +1,52 @@
+{
+  "name": "utility-node-opts-parser",
+  "version": "0.0.1",
+  "description": "Parse the opts feeding from environment variables or arguments. Won't handle `--test-opt=\"value\"` case.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix index.js ./lib/**/*.js",
+    "test": "npm run clean-coverage; FORCE_COLOR=true babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --recursive --full-trace --es_staging --harmony --check-leaks --compilers js:babel-register -c -R spec ./test/**/*.spec.js --this-is-just-for-test | cat ",
+    "clean-coverage": "rm -rfv coverage/",
+    "doc": "npm run clean-doc; jsdoc -c ./jsdoc.json; echo Documentation generated under ./jsdoc folder.",
+    "clean-doc": "rm -rf jsdoc",
+    "serve-doc": "npm run doc; http-server ./jsdoc -p 11023",
+    "clean": "npm run clean-coverage; npm run clean-doc",
+    "reset": "npm run clean; rm -rfv node_modules/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://unknownmoon@github.com/unknownmoon/utility-node-opts-parser.git"
+  },
+  "keywords": [
+    "utility",
+    "opts",
+    "parser",
+    "node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unknownmoon/utility-node-opts-parser/issues"
+  },
+  "homepage": "https://github.com/unknownmoon/utility-node-opts-parser#readme",
+  "engines": {
+    "node": ">=6.0.0",
+    "npm": "^3.8.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-node": "^6.0.1",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.10.2",
+    "http-server": "^0.9.0",
+    "ink-docstrap": "^1.1.4",
+    "isparta": "^4.0.0",
+    "jsdoc": "^3.4.0",
+    "lodash": "^4.13.1",
+    "mocha": "^2.5.1",
+    "moment": "^2.13.0",
+    "sinon": "^1.17.4"
+  }
+}
