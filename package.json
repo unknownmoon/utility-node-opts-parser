@@ -1,6 +1,6 @@
 {
   "name": "utility-node-opts-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Parse the opts feeding from environment variables or arguments. Won't handle `--test-opt=\"value\"` case.",
   "main": "dist/es2015-node/index.js",
   "scripts": {
