@@ -22,6 +22,7 @@ __Table of Contents__
 - [Initialisation](#initialisation)
 - [Clean Up](#clean-up)
 - [Test](#test)
+- [Build](#build)
 - [Generate JSDoc Documentation](#generate-jsdoc-documentation)
 
 <!-- /MarkdownTOC -->
@@ -56,6 +57,17 @@ Coverage report can be found in `./coverage` folder.
 npm test
 ```
 
+<a name="build"></a>
+## Build
+
+The source code is written in ES2015, hence before NodeJS fully support ES2015, we need to build the code to `es2015-node` using [Babel][babel-link].
+
+The built code can be found in `./dist` folder. 
+
+```bash
+npm run build
+```
+
 <a name="generate-jsdoc-documentation"></a>
 ## Generate JSDoc Documentation
 
@@ -73,3 +85,5 @@ npm run serve-doc
 [mocha-link]: http://mochajs.org/
 [chai-link]: http://chaijs.com/ 
 [sinon-link]: http://sinonjs.org/
+[babel-link]: https://babeljs.io/
+
