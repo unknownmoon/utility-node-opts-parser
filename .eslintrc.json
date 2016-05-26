@@ -54,7 +54,7 @@
     "no-useless-escape": "error",
     "vars-on-top": "error",
     "wrap-iife": [ "error", "outside" ],
-    "no-use-before-define": "error",
+    "no-use-before-define": [ "error", "nofunc" ],
     "no-path-concat": "error",
     "array-bracket-spacing": [ "warn", "always" ],
     "block-spacing": [ "warn", "always" ],

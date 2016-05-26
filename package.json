@@ -2,16 +2,19 @@
   "name": "utility-node-opts-parser",
   "version": "0.0.1",
   "description": "Parse the opts feeding from environment variables or arguments. Won't handle `--test-opt=\"value\"` case.",
-  "main": "index.js",
+  "main": "dist/es2015-node/index.js",
   "scripts": {
     "lint": "eslint --fix index.js ./lib/**/*.js",
-    "test": "npm run clean-coverage; FORCE_COLOR=true babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --recursive --full-trace --es_staging --harmony --check-leaks --compilers js:babel-register -c -R spec ./test/**/*.spec.js --this-is-just-for-test | cat ",
+    "test": "npm run clean-coverage; npm run lint; FORCE_COLOR=true babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --recursive --full-trace --es_staging --harmony --check-leaks --compilers js:babel-register -c -R spec ./test/**/*.spec.js | cat ",
+    "test-only": "FORCE_COLOR=true mocha --recursive --full-trace --es_staging --harmony --check-leaks --compilers js:babel-register -c -R spec ./test/**/*.spec.js",
     "clean-coverage": "rm -rfv coverage/",
     "doc": "npm run clean-doc; jsdoc -c ./jsdoc.json; echo Documentation generated under ./jsdoc folder.",
     "clean-doc": "rm -rf jsdoc",
     "serve-doc": "npm run doc; http-server ./jsdoc -p 11023",
-    "clean": "npm run clean-coverage; npm run clean-doc",
-    "reset": "npm run clean; rm -rfv node_modules/"
+    "clean-prod": "gulp prod.clean",
+    "clean": "npm run clean-coverage; npm run clean-doc; npm run clean-prod",
+    "reset": "npm run clean; rm -rf node_modules/",
+    "build": "gulp prod"
   },
   "repository": {
     "type": "git",
@@ -39,7 +42,11 @@
     "babel-preset-es2015-node": "^6.0.1",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
+    "del": "^2.2.0",
     "eslint": "^2.10.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sourcemaps": "^1.6.0",
     "http-server": "^0.9.0",
     "ink-docstrap": "^1.1.4",
     "isparta": "^4.0.0",
@@ -47,6 +54,7 @@
     "lodash": "^4.13.1",
     "mocha": "^2.5.1",
     "moment": "^2.13.0",
-    "sinon": "^1.17.4"
+    "sinon": "^1.17.4",
+    "through2": "^2.0.1"
   }
 }
