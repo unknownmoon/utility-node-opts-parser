@@ -24,6 +24,7 @@ __Table of Contents__
 - [Test](#test)
 - [Build](#build)
 - [Generate JSDoc Documentation](#generate-jsdoc-documentation)
+- [Release](#release)
 
 <!-- /MarkdownTOC -->
 
@@ -79,6 +80,15 @@ npm run doc
 # note that no watch functionality is hooked, hence
 # changing code won't trigger documentation regeneration.
 npm run serve-doc
+```
+
+<a name="release"></a>
+## Release
+
+Shorthand script to generate release content, including `./coverage`, `./jsdoc` and `./dist`.
+
+```bash
+npm run release
 ```
 
 <!-- links -->
