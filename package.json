@@ -16,7 +16,8 @@
     "clean": "npm run clean-coverage; npm run clean-doc; npm run clean-prod",
     "reset": "npm run clean; rm -rf node_modules/",
     "build": "gulp prod",
-    "release": "npm test; npm run doc; npm run build"
+    "release": "npm test; npm run doc; npm run build",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
