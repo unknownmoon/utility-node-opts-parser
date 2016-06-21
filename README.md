@@ -9,6 +9,7 @@
 | Master | Develop |
 | ------ | ------- |
 | [![Build Status Master](https://travis-ci.org/unknownmoon/utility-node-opts-parser.svg?branch=master)](https://travis-ci.org/unknownmoon/utility-node-opts-parser) | [![Build Status Develop](https://travis-ci.org/unknownmoon/utility-node-opts-parser.svg?branch=develop)](https://travis-ci.org/unknownmoon/utility-node-opts-parser) |
+| [![Coverage Status](https://coveralls.io/repos/github/unknownmoon/utility-node-opts-parser/badge.svg?branch=master)](https://coveralls.io/github/unknownmoon/utility-node-opts-parser?branch=master) | [![Coverage Status](https://coveralls.io/repos/github/unknownmoon/utility-node-opts-parser/badge.svg?branch=develop)](https://coveralls.io/github/unknownmoon/utility-node-opts-parser?branch=develop) |
 
 Parse the opts feeding from environment variables or arguments.
 

@@ -13,3 +13,5 @@ branches:
   only:
     - master
     - develop
+after_success:
+  - npm run coveralls
