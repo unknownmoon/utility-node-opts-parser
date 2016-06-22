@@ -1,6 +1,6 @@
 {
   "name": "utility-node-opts-parser",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Parse the opts feeding from environment variables or arguments. Won't handle `--test-opt=\"value\"` case.",
   "main": "dist/es2015-node/index.js",
   "scripts": {
@@ -17,8 +17,7 @@
     "clean": "npm run clean-coverage && npm run clean-doc && npm run clean-prod",
     "reset": "npm run clean && rm -rf node_modules/",
     "build": "gulp prod",
-    "release": "npm run test-core && npm run doc && npm run build",
-    "postinstall": "npm run build"
+    "release": "npm run test-core && npm run doc && npm run build"
   },
   "repository": {
     "type": "git",
